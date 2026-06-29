@@ -26,3 +26,11 @@ def load_person_info():
                 }
     except FileNotFoundError:
         return None
+    
+def view_person_info(person_info):
+    print("Personal Information:")
+    print(f"  Name: {person_info['name']}")
+    print(f"  Date of Birth: {person_info['dob']}")
+    print(f"  Email: {person_info['email']}")
+    print(f"  Address: {person_info['address']}")
+    print(f"  Phone: {person_info['phone']}")    

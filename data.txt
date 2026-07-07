@@ -1,2 +1,2 @@
-20260626-1,washing,my clothes look messy,2026-06-26,2026-06-27,Pending
+20260626-1,washing,my clothes look messy,2026-06-26,2026-06-27,Completed
 20260629-1,Reporting,Much unsaved work,2026-06-29,2026-07-01,Completed

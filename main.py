@@ -17,6 +17,7 @@ if not person_info:
     person_info = get_person_info(name, dob, email, address, phone)
     save_person_info(person_info)
 print("Welcome to the To-Do List Application!")
+print("Kello " + person_info["name"] + "!")
 print("Menu:")
 print("1. Tasks")
 print("2. Profile")

@@ -2,7 +2,7 @@ from completetask import update_status
 from personinfo import get_person_info,person_info, save_person_info, load_person_info,view_person_info
 from addtask import add_task, load_tasks, save_tasks,get_valid_date
 from addtask import tasks
-from viewtasks import view_tasks
+from viewtasks import view_tasks, view_tasks_due_today
 
 load_tasks()
 person_info = load_person_info()        
@@ -18,6 +18,7 @@ if not person_info:
     save_person_info(person_info)
 print("Welcome to the To-Do List Application!")
 print("Hello " + person_info["name"] + "!")
+view_tasks_due_today()
 print("Menu:")
 print("1. Tasks")
 print("2. Profile")

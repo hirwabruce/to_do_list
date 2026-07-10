@@ -30,7 +30,8 @@ if choice_1=='2':
     print("1.Edit the profile")
     print("2.View the profie")
     choice_2=input("Type'edit'or'1' to edit the profile and 'view'or '2' to view the profile. ")
-    if choice_2.lower=='2' or choice_2.lower=='view':
+    if choice_2.lower()=='2' or choice_2.lower()=='view':
+        #person_info1 = load_person_info()
         view_person_info(person_info)
 
 

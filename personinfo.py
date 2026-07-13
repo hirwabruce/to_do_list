@@ -34,3 +34,13 @@ def view_person_info(person_info):
     print(f"  Email: {person_info['email']}")
     print(f"  Address: {person_info['address']}")
     print(f"  Phone: {person_info['phone']}")    
+
+def edit_person_info(person_info):
+    print("Edit Personal Information:")
+    person_info['name'] = input(f"Enter your name [{person_info['name']}]: ") or person_info['name']
+    person_info['dob'] = input(f"Enter your date of birth [{person_info['dob']}]: ") or person_info['dob']
+    person_info['email'] = input(f"Enter your email [{person_info['email']}]: ") or person_info['email']
+    person_info['address'] = input(f"Enter your address [{person_info['address']}]: ") or person_info['address']
+    person_info['phone'] = input(f"Enter your phone number [{person_info['phone']}]: ") or person_info['phone']
+    save_person_info(person_info)
+    print("Profile updated successfully.")

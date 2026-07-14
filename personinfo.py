@@ -36,7 +36,7 @@ def view_person_info(person_info):
     print(f"  Phone: {person_info['phone']}")    
 
 def edit_person_info(person_info):
-    print("Edit Personal Information:")
+    print("Edit Personal Information(Leave blank to keep current value):")
     person_info['name'] = input(f"Enter your name [{person_info['name']}]: ") or person_info['name']
     person_info['dob'] = input(f"Enter your date of birth [{person_info['dob']}]: ") or person_info['dob']
     person_info['email'] = input(f"Enter your email [{person_info['email']}]: ") or person_info['email']

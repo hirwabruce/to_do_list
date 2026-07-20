@@ -29,6 +29,7 @@ if choice_1=='2':
     print("Welcome to your profile")
     print("1.Edit the profile")
     print("2.View the profie")
+    
     choice_2=input("Type'edit'or'1' to edit the profile and 'view'or '2' to view the profile. ")
     if choice_2.lower()=='2' or choice_2.lower()=='view':
         #person_info1 = load_person_info()
@@ -44,7 +45,8 @@ elif choice_1=='1':
     print("1.Add a task")
     print("2.View tasks")
     print("3.Complete a task")
-    choice_3=input("Type 'add' or '1' to add a task, 'view' or '2' to view tasks, and 'complete' or '3' to complete a task. ")
+    print("4.Delete a task")
+    choice_3=input("Type 'add' or '1' to add a task, 'view' or '2' to view tasks, 'complete' or '3' to complete a task, or 'delete' or '4' to delete a task. ")
     if choice_3.lower()=='add' or choice_3.lower()=='1':
         add_task()
         save_tasks()

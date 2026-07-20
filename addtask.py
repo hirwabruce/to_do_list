@@ -32,7 +32,7 @@ def add_task():
 
         task=dict()
         task["id"]=task_id
-        task["name"]=task_name
+        task["name"]=task_name.title
         task["description"]=task_description
         task["date_created"]=date_created   
         task["due_date"]=task_due_date
@@ -46,7 +46,7 @@ def save_tasks():
         for task in tasks:
 
          file.write(
-    f"{task['id']},{task['name']},{task['description']},{task['date_created']},{task['due_date']},{task['status']}\n"
+    f"{task['id']},{task['name']}.,{task['description']},{task['date_created']},{task['due_date']},{task['status']}\n"
 )
 
 def load_tasks():

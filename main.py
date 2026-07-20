@@ -89,7 +89,7 @@ elif choice_1=='1':
               print(f"- {task['name']} ({task['status']})")
 
            task_name = input("\nEnter the name of the task you want to delete: ")
-           delete_task_status(task_name)  
+           delete_task_status(task_name.lower())  
 #add_task()
 #save_tasks()
 #view_tasks()

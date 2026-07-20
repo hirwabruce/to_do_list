@@ -69,6 +69,10 @@ elif choice_1=='1':
 
            task_name = input("\nEnter the name of the task you want to complete: ")
            update_status(task_name)
+    elif choice_3.lower() == 'delete' or choice_3 == '4':
+        from deletetask import delete_task
+        task_name = input("Enter the name of the task you want to delete: ")
+        delete_task(task_name)       
 #add_task()
 #save_tasks()
 #view_tasks()

@@ -1,4 +1,5 @@
 from completetask import update_status
+from deletetask import delete_task_status
 from personinfo import edit_person_info, get_person_info,person_info, save_person_info, load_person_info,view_person_info
 from addtask import add_task, load_tasks, save_tasks,get_valid_date
 from addtask import tasks
@@ -70,9 +71,25 @@ elif choice_1=='1':
            task_name = input("\nEnter the name of the task you want to complete: ")
            update_status(task_name)
     elif choice_3.lower() == 'delete' or choice_3 == '4':
-        from deletetask import delete_task
+        """from deletetask import delete_task
         task_name = input("Enter the name of the task you want to delete: ")
-        delete_task(task_name)       
+        delete_task(task_name)"""    
+        task_date = input("Enter the date of the task you want to delete (YYYY-MM-DD): ")
+
+        load_tasks()  # Load tasks from data.txt
+
+     # Find tasks for the entered date
+        tasks_for_date = [task for task in tasks if task["date_created"] == task_date]
+
+        if not tasks_for_date:
+           print("No tasks found for this date.")
+        else:
+           print(f"\nTasks for {task_date}:")
+           for task in tasks_for_date:
+              print(f"- {task['name']} ({task['status']})")
+
+           task_name = input("\nEnter the name of the task you want to delete: ")
+           delete_task_status(task_name)  
 #add_task()
 #save_tasks()
 #view_tasks()

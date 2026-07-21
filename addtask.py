@@ -32,7 +32,7 @@ def add_task():
 
         task=dict()
         task["id"]=task_id
-        task["name"]=task_name.title
+        task["name"]=task_name.title()
         task["description"]=task_description
         task["date_created"]=date_created   
         task["due_date"]=task_due_date

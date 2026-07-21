@@ -17,8 +17,9 @@ def view_tasks():
 
 def view_tasks_due_today():
     today = date.today().isoformat()
-    tasks_due_today = [task for task in tasks if task["due_date"] == today]
-
+    
+    tasks_due_today = [task for task in tasks if task["due_date"] == today and task["status"] == "Pending"]
+    
     if not tasks_due_today:
         print("No tasks due today.")
         return

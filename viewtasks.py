@@ -5,15 +5,16 @@ def view_tasks():
     if not tasks:
         print("No tasks available.")
         return
-
-    for index, task in enumerate(tasks, start=1):
-        print(f"Task {index}:")
-        print(f"  Name: {task['name']}")
-        print(f"  Description: {task['description']}")
-        print(f"  Date Created: {task['date_created']}")
-        print(f"  Due Date: {task['due_date']}")
-        print(f"  Status: {task['status']}")
-        print("-" * 20)
+    for task in tasks:
+        task["status"]="Pending" or task["status"]=="Completed" 
+        for index, task in enumerate(tasks, start=1):
+             print(f"Task {index}:")
+             print(f"  Name: {task['name']}")
+             print(f"  Description: {task['description']}")
+             print(f"  Date Created: {task['date_created']}")
+             print(f"  Due Date: {task['due_date']}")
+             print(f"  Status: {task['status']}")
+             print("-" * 20)
 
 def view_tasks_due_today():
     today = date.today().isoformat()

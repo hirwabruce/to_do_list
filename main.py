@@ -93,3 +93,7 @@ elif choice_1=='1':
 #add_task()
 #save_tasks()
 #view_tasks()
+elif choice_1=='3':
+      print("Exiting the application. Goodbye!")
+      exit()
+      

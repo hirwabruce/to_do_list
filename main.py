@@ -1,6 +1,6 @@
 from completetask import update_status
 from deletetask import delete_task_status
-from personinfo import edit_person_info, get_person_info,person_info, save_person_info, load_person_info,view_person_info
+from personinfo import delete_person_info, edit_person_info, get_person_info,person_info, save_person_info, load_person_info,view_person_info
 from addtask import add_task, load_tasks, save_tasks,get_valid_date
 from addtask import tasks
 from viewtasks import view_tasks, view_tasks_due_today
@@ -30,6 +30,7 @@ if choice_1=='2':
     print("Welcome to your profile")
     print("1.Edit the profile")
     print("2.View the profie")
+    print("3.Delete the profile")
     
     choice_2=input("Type'edit'or'1' to edit the profile and 'view'or '2' to view the profile. ")
     if choice_2.lower()=='2' or choice_2.lower()=='view':
@@ -37,7 +38,8 @@ if choice_1=='2':
         view_person_info(person_info)
     elif choice_2.lower()=='1' or choice_2.lower()=='edit':
         edit_person_info(person_info)
-
+    elif choice_2.lower()=='3' or choice_2.lower()=='delete':
+        delete_person_info()
 
 
 

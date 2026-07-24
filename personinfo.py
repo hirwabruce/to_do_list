@@ -44,3 +44,10 @@ def edit_person_info(person_info):
     person_info['phone'] = input(f"Enter your phone number [{person_info['phone']}]: ") or person_info['phone']
     save_person_info(person_info)
     print("Profile updated successfully.")
+
+def delete_person_info():
+    global person_info
+    person_info = {}
+    with open("personinfo.txt", "w") as file:
+        file.write("")
+    print("Profile deleted successfully.")

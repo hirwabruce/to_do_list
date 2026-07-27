@@ -34,3 +34,11 @@ def view_tasks_due_today():
         print(f"  Due Date: {task['due_date']}")
         print(f"  Status: {task['status']}")
         print("-" * 20)
+
+def percentage_tasks():
+    total_tasks = len(tasks)
+    if total_tasks == 0:
+        print("No tasks available.")
+        return
+
+    

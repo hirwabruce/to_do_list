@@ -3,7 +3,7 @@ from deletetask import delete_task_status
 from personinfo import delete_person_info, edit_person_info, get_person_info,person_info, save_person_info, load_person_info,view_person_info
 from addtask import add_task, load_tasks, save_tasks,get_valid_date
 from addtask import tasks
-from viewtasks import view_tasks, view_tasks_due_today
+from viewtasks import percentage_tasks, view_tasks, view_tasks_due_today
 
 load_tasks()
 person_info = load_person_info()        
@@ -55,6 +55,7 @@ elif choice_1=='1':
         save_tasks()
     elif choice_3.lower()=='view' or choice_3.lower()=='2':
         view_tasks()
+        percentage_tasks()
     elif choice_3.lower() == 'complete' or choice_3 == '3':
         task_date = input("Enter the date of the task you want to complete (YYYY-MM-DD): ")
 

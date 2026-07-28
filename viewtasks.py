@@ -40,5 +40,9 @@ def percentage_tasks():
     if total_tasks == 0:
         print("No tasks available.")
         return
-
-    
+    pending_tasks = sum(1 for task in tasks if task["status"] == "Pending")
+    completed_tasks = sum(1 for task in tasks if task["status"] == "Completed")
+    pending_percentage = (pending_tasks / total_tasks) * 100
+    completed_percentage = (completed_tasks / total_tasks) * 100
+    print(f"Percentage of pending tasks: {pending_percentage:.2f}%")
+    print(f"Percentage of completed tasks: {completed_percentage:.2f}%")

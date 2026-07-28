@@ -36,7 +36,7 @@ def view_tasks_due_today():
         print("-" * 20)
 
 def percentage_tasks():
-    total_tasks = len(tasks)
+    total_tasks = len([task for task in tasks if task["status"] == "Pending" or task["status"] == "Completed"])
     if total_tasks == 0:
         print("No tasks available.")
         return

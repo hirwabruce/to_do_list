@@ -3,6 +3,7 @@ from deletetask import delete_task_status
 from personinfo import delete_person_info, edit_person_info, get_person_info,person_info, save_person_info, load_person_info,view_person_info
 from addtask import add_task, load_tasks, save_tasks,get_valid_date
 from addtask import tasks
+from searchtask import search_tasks
 from viewtasks import percentage_tasks, view_tasks, view_tasks_due_today
 
 load_tasks()
@@ -48,8 +49,9 @@ elif choice_1=='1':
     print("1.Add a task")
     print("2.View tasks")
     print("3.Complete a task")
-    print("4.Delete a task")
-    choice_3=input("Type 'add' or '1' to add a task, 'view' or '2' to view tasks, 'complete' or '3' to complete a task, or 'delete' or '4' to delete a task. ")
+    print("4.Search for a task")
+    print("5.Delete a task")
+    choice_3=input("Type 'add' or '1' to add a task, 'view' or '2' to view tasks, 'complete' or '3' to complete a task, or 'search' or '4' to search for a task, or 'delete' or '5' to delete a task. ")
     if choice_3.lower()=='add' or choice_3.lower()=='1':
         add_task()
         save_tasks()
@@ -73,7 +75,16 @@ elif choice_1=='1':
 
            task_name = input("\nEnter the name of the task you want to complete: ")
            update_status(task_name)
-    elif choice_3.lower() == 'delete' or choice_3 == '4':
+    elif choice_3.lower() == 'search' or choice_3 == '4':
+        query = input("Enter the search query: ")
+        results = search_tasks(query)
+        if results:
+            print("Search results:")
+            for task in results:
+                print(f"- {task['name']} ({task['status']})")
+        else:
+            print("No tasks found.")
+    elif choice_3.lower() == 'delete' or choice_3 == '5':
         """from deletetask import delete_task
         task_name = input("Enter the name of the task you want to delete: ")
         delete_task(task_name)"""    

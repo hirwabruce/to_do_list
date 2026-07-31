@@ -76,7 +76,7 @@ elif choice_1=='1':
            task_name = input("\nEnter the name of the task you want to complete: ")
            update_status(task_name)
     elif choice_3.lower() == 'search' or choice_3 == '4':
-        query = input("Enter the search query: ")
+        query = input("Enter the task name to search for: ")
         results = search_tasks(query)
         if results:
             print("Search results:")

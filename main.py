@@ -71,7 +71,9 @@ elif choice_1=='1':
         else:
            print(f"\nTasks for {task_date}:")
            for task in tasks_for_date:
-              print(f"- {task['name']} ({task['status']})")
+              if task["status"] == "Pending":
+                  
+                print(f"- {task['name']} ({task['status']})")
 
            task_name = input("\nEnter the name of the task you want to complete: ")
            update_status(task_name)

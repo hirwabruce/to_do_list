@@ -64,14 +64,14 @@ elif choice_1=='1':
         load_tasks()  # Load tasks from data.txt
 
      # Find tasks for the entered date
-        tasks_for_date = [task for task in tasks if task["date_created"] == task_date]
+        tasks_for_date = [task for task in tasks if task["status"] == "Pending" and task["date_created"] == task_date]
 
         if not tasks_for_date:
-           print("No tasks found for this date.")
+           print("No tasks found for this date.")   
         else:
            print(f"\nTasks for {task_date}:")
            for task in tasks_for_date:
-              if task["status"] == "Pending":
+              
                   
                 print(f"- {task['name']} ({task['status']})")
 

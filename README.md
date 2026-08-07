@@ -7,3 +7,4 @@ A simple to do list program built with Python.
 -Mark the task as complete
 -Track the progress
 -Delete a task
+-Search for a task
